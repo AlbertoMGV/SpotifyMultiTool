@@ -42,6 +42,10 @@ const name = async () => {
 
 }
 
+function options() {
+	option();
+}
+
 
 const option = async () => {
   	const option = await inquirer.askOption();
