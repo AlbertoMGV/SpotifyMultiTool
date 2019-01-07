@@ -78,6 +78,15 @@ const option = async () => {
 
 }
 
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+  
+}
+
 const option1 = async () => {
 		console.log(chalk.green('***** Playlist Copier *****'));
 		console.log("");
@@ -98,6 +107,7 @@ const option2 = async () => {
 		console.log(chalk.green('***** Playlist Songs *****'));
 		console.log('');
 	  	spoty.getSongs(pl.playlist);
+	  	
 	  	back();
 }
 
