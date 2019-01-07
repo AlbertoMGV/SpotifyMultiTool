@@ -26,8 +26,13 @@ function banner () {
 	console.log();
 }
 
+function quickStart () {
+	reset();
+	console.log(chalk.blue("Welcome!"));
+	option();
+}
 
-const start = async () => {
+const name = async () => {
 	const user = await inquirer.askName();
   	reset();
   	console.log('Welcome '+user.name+'!');
@@ -37,9 +42,6 @@ const start = async () => {
 
 }
 
-function options() {
-	option();
-}
 
 const option = async () => {
   	const option = await inquirer.askOption();
@@ -113,4 +115,4 @@ const back = async () => {
 }
 
 banner();
-start();
+quickStart();
